@@ -58,7 +58,7 @@ namespace Unicode
 
         private void BinaryWrite()
         {
-            FileStream stream = new FileStream()
+            FileStream stream = new FileStream();
         }
         
     }
