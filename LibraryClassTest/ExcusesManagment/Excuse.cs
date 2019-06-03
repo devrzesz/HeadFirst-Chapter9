@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace ExcusesManagment
+namespace LibraryClassTest
 {
-    class Excuse
+    public class Excuse
     {
         public string Description { get; set; }
         public string Results { get; set; }
@@ -31,12 +30,12 @@ namespace ExcusesManagment
             OpenFile(fileNames[random.Next(fileNames.Length)]);
         }
 
-        
+
 
         public void OpenFile(string excusePath)
         {
             this.ExcusePath = excusePath;
-            using(StreamReader reader = new StreamReader(excusePath))
+            using (StreamReader reader = new StreamReader(excusePath))
             {
                 Description = reader.ReadLine();
                 Results = reader.ReadLine();
